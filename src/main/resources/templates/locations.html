@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Location page</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Location</h1>
+
+
+<table>
+    <tr>
+        <td>Bookshelf</td>
+        <td>Shelf</td>
+        <td>Box</td>
+        <td>buttons</td>
+    </tr>
+    <tr th:each="location: ${locations}">
+        <td th:text="${location.bookcase}"/>
+        <td th:text="${location.shelf}"/>
+        <td th:text="${location.box}"/>
+        <td>
+            <a th:href="@{/updateLocation(locationID=${location.LocationID})}" class="btn-primary">UPDATE</a>
+            <a th:href="@{/delete(productID=${location.LocationID})}" class="btn-primary">DELETE</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

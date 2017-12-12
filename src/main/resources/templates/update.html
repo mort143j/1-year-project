@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Page</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Update Monkey</h1>
+
+<form th:action="@{/update}" method="post" th:object="${user}">
+    <input type="text" th:field="*{userId}" style="display: none" readonly="readonly"/>
+    <p>Password</p>
+    <input type="text" name="password"/>
+    <p></p>
+    <input type="submit" value="Send" class="btn-primary" />
+
+</form>
+
+</body>
+</html>

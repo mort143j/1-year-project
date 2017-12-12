@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Product</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Update Product</h1>
+
+<form th:action="@{/updateProduct}" method="post" th:object="${product}">
+    <input type="hidden" th:field="*{productID}"/>
+    <p>Product Name:</p>
+    <input type="text" th:field="*{name}"/>
+    <p>Cost Price:</p>
+    <input type="text" th:field="*{costPrice}"/>
+    <p>Sales Price:</p>
+    <input type="text" th:field="*{salesPrice}"/>
+    <p>Product Number</p>
+    <input type="text" th:field="*{productNumber}"/>
+    <p></p>
+    <input type="submit" value="Update" class="btn-primary" />
+</form>
+
+</body>
+</html>

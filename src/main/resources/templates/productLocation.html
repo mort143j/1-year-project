@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Storage</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Storage</h1>
+
+
+<form th:action="@{/productLocation}" method="post">
+    <select name="productID">
+        <option th:each="product : ${products}"
+                th:value="${product.productID}"
+                th:text="${product.name}"/>
+    </select>
+    <select name="locationID">
+        <option th:each="location : ${locations}"
+                th:value="${location.locationID}"
+                th:text="${location}"/>
+    </select>
+    <p>Stock:</p>
+    <input name="stock" type="Integer" th:field="*{stock}"/>
+    <p></p>
+    <input type="submit" value="Combine" class="btn-primary" />
+</form>
+
+</body>
+</html>

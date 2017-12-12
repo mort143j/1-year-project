@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1> Profile Page </h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    <tr th:object="${user}">
+        <td th:text="${user.userId}"/>
+        <td th:text="${user.name}"/> 
+    </tr>
+</table>
+
+<form action="update.html">
+    <input type="submit" value="Change password" class="btn-primary" />
+</form>
+
+<form action="newLocation.html">
+    <input type="submit" value="New Location" class="btn-primary" />
+</form>
+
+<form action="locations.html">
+    <input type="submit" value="Locations" class="btn-primary" />
+</form>
+
+<form action="newProduct.html">
+    <input type="submit" value="New Product" class="btn-primary" />
+</form>
+
+<form action="products.html">
+    <input type="submit" value="Products" class="btn-primary" />
+</form>
+
+<form action="productLocation.html">
+    <input type="submit" value="Storage" class="btn-primary" />
+</form>
+
+</body>
+</html>

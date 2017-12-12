@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New Location Page</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>New Location</h1>
+
+<form th:action="@{/newLocation}" method="post" th:object="${location}">
+    <p>Bookcase:</p>
+    <input type="text" th:field="*{bookcase}"/>
+    <p>shelf:</p>
+    <input type="text" th:field="*{shelf}"/>
+    <p>Box:</p>
+    <input type="text" th:field="*{box}"/>
+    <p></p>
+    <input type="submit" value="Add" class="btn-primary"/>
+</form>
+
+</body>
+</html>

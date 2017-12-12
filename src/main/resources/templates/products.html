@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product Page</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Products</h1>
+
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>costPrice</td>
+        <td>salesPrice</td>
+        <td>buttons</td>
+    </tr>
+    <tr th:each="product: ${products}">
+        <td th:text="${product.name}"/>
+        <td th:text="${product.costPrice}"/>
+        <td th:text="${product.salesPrice}"/>
+
+        <td>
+            <a th:href="@{/updateProduct(productID=${product.productID})}" class="btn-primary">UPDATE</a>
+            <a th:href="@{/delete(productID=${product.productID})}" class="btn-primary">DELETE</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

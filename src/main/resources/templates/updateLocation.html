@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Location</title>
+    <link rel="stylesheet"
+          href="C:\Users\Stryker\Desktop\1.års.erhversprojekt\src\main\resources\static\style.css"
+          th:href="@{style.css}" />
+</head>
+<body>
+<h1>Update location</h1>
+
+<form th:action="@{/updateLocation}" method="post" th:object="${location}">
+    <input type="hidden" th:field="*{locationID}"/>
+    <p>Bookcase:</p>
+    <input type="text" th:field="*{bookcase}"/>
+    <p>Shelf:</p>
+    <input type="text" th:field="*{shelf}"/>
+    <p>Box:</p>
+    <input type="text" th:field="*{box}"/>
+    <p></p>
+    <input type="submit" value="Update" class="btn-primary" />
+</form>
+
+</body>
+</html>
